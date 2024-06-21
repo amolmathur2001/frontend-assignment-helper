@@ -29,7 +29,7 @@ steps.forEach((step) => {
   }
   nextBtn.addEventListener("click", () => {
     document.querySelector(`.step-${currentStep}`).style.display = "none";
-    if (currentStep < 5) {
+    if (currentStep < 5 && validateForm()) {
       currentStep++;
       currentCircle++;
       setTotal();
@@ -115,14 +115,14 @@ function switchPrice(checked) {
   const monthlyPrice = [9, 12, 15];
   const prices = document.querySelectorAll(".plan-priced");
   if (checked) {
-    prices[0].innerHTML = `$${yearlyPrice[0]}/yr`;
-    prices[1].innerHTML = `$${yearlyPrice[1]}/yr`;
-    prices[2].innerHTML = `$${yearlyPrice[2]}/yr`;
+    prices[0].innerHTML = `&#8377;${yearlyPrice[0]}/yr`;
+    prices[1].innerHTML = `&#8377;${yearlyPrice[1]}/yr`;
+    prices[2].innerHTML = `&#8377;${yearlyPrice[2]}/yr`;
     setTime(true)
   } else {
-    prices[0].innerHTML = `$${monthlyPrice[0]}/mo`;
-    prices[1].innerHTML = `$${monthlyPrice[1]}/mo`;
-    prices[2].innerHTML = `$${monthlyPrice[2]}/mo`;
+    prices[0].innerHTML = `&#8377;${monthlyPrice[0]}/mo`;
+    prices[1].innerHTML = `&#8377;${monthlyPrice[1]}/mo`;
+    prices[2].innerHTML = `&#8377;${monthlyPrice[2]}/mo`;
     setTime(false)
   }
 }
@@ -162,7 +162,7 @@ function setTotal() {
 
     val += Number(res);
   }
-  total.innerHTML = `$${val + Number(res)}/${time?"yr":"mo"}`;
+  total.innerHTML = `&#8377;${val + Number(res)}/${time?"yr":"mo"}`;
 }
 function setTime(t) {
   return time = t;
