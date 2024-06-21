@@ -23,10 +23,8 @@ body {
 }
 
 .form {
-    margin-top: 30px;
-    margin-left: 150px;
-    margin-bottom: 30px;
     width: 1000px;
+    margin: auto;
     background-color: white;
     border-radius: 2rem;
     border: 1px solid gray;
@@ -383,7 +381,6 @@ body {
     transform: translateX(26px);
   }
   
-  /* Rounded sliders */
   .slider.round {
     border-radius: 34px;
   }
@@ -392,7 +389,7 @@ body {
     border-radius: 50%;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     body {
       position: relative;
     }
